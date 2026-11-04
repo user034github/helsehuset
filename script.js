@@ -1,17 +1,17 @@
-let language = document.documentElement.lang;
-let user_action;
-let user_action_stable;
-let select;
-let skjemaType;
-let category;
-let week_nr = get_week_nr();
-let day_nr = (new Date().getDay() + 6) % 7;
-let ref_day_nr = (new Date().getDay() + 6) % 7;
 let time_nr;
 let name;
 let phone;
+let category;
 let description;
 let countdown = 5;
+let select;
+let skjemaType;
+let language = document.documentElement.lang;
+let user_action_stable;
+let user_action;
+let week_nr = get_week_nr();
+let day_nr = (new Date().getDay() + 6) % 7;
+let ref_day_nr = (new Date().getDay() + 6) % 7;
 
 (function () {
     var d = document;
@@ -73,7 +73,7 @@ let countdown = 5;
     }
 })();
 
-if (window.location.pathname === "/helsehuset/") {
+if (window.location.pathname === "/") {
     document.getElementById("start").scrollIntoView({
         behavior: "smooth",
         block: "center"
@@ -329,7 +329,7 @@ document.querySelectorAll('a[href^="#"], a[data-action^="#"], div[href^="#"], bu
         if (user_action === "T sendt" && skjemaType === "kontakt") {
             user_action_stable = "M sendt";
         }
-        fetch("./api/track", {
+        fetch("/api/track", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -367,7 +367,7 @@ function findTime(container, text) {
 async function update_availability() {
     DontTouch = [];
 
-    const response = await fetch("./api/cell-info-basic");
+    const response = await fetch("/api/cell-info-basic");
     const data = await response.json();
 
     for (const key of Object.keys(data)) {
@@ -441,6 +441,63 @@ function set_week_display(week_nr) {
     }
 }
 
+const chat_input = document.getElementById("spørsmål-chat-input");
+const chat_form = document.getElementById("spørsmål-chat-form");
+const chat_messages = document.getElementById("spørsmål-chat-messages");
+const chat_panel = document.getElementById("spørsmål-chat-panel");
+const chat_toggle = document.getElementById("spørsmål-chat-toggle");
+const chat_close = document.getElementById("spørsmål-chat-close");
+const fallback = "Sorry, jeg vet ikke svaret på det spørsmålet ennå. " +
+    "Prøv å spørre om priser, vår adresse, åpningstider, osv.";
+
+function findAnswer(message) {
+    const question = normalize(message);
+    for (const rule of rules) {
+        const match = rule.keywords.some(keyword => {
+            const term = normalize(keyword);
+            if (term.length <= 4 && !term.includes(" ")) {
+                return (` ${question} `).includes(` ${term} `);
+            }
+            return question.includes(term);
+        });
+        if (match) return rule.answer;
+    }
+    return fallback;
+}
+
+function normalize(user_text) {
+    return user_text.toLocaleLowerCase().normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .replace(/[^\p{L}\p{N}\s]/gu, " ")
+        .replace(/\s+/g, " ").trim();
+}
+
+function setOpen(open) {
+    chat_panel.classList.toggle("is-open", open);
+    if (open) chat_input.focus();
+}
+
+function addMessage(user_text, sender) {
+    const chat_bubble = document.createElement("div");
+    chat_bubble.textContent = user_text;
+    chat_bubble.className = `spørsmål-chat-message ${sender}`;
+    chat_messages.appendChild(chat_bubble);
+    chat_messages.scrollTop = chat_messages.scrollHeight;
+}
+
+chat_toggle.addEventListener("click", () => setOpen(!chat_panel.classList.contains("is-open")));
+chat_close.addEventListener("click", () => setOpen(false));
+
+chat_form.addEventListener("submit", event => {
+    event.preventDefault();
+    const question = chat_input.value.trim();
+    if (!question) return;
+    addMessage(question, "user");
+    addMessage(findAnswer(question), "bot");
+    chat_input.value = "";
+    chat_input.focus();
+});
+
 const skjema_index = {
     "booking": "/api/cell-add",
     "kontakt": "/api/message-add"
@@ -492,3 +549,18 @@ const day_index_en = {
     5: "Sat.",
     6: "Sun."
 };
+
+const rules = [
+    {
+        keywords: ["pris", "kostnad", "hvor mye", "kroner", "euro"],
+        answer: "Våre priser er: [prisinformasjon]."
+    },
+    {
+        keywords: ["adresse", "sted", "lokasjon", "hvor"],
+        answer: "Vår adresse er: [adresse]."
+    },
+    {
+        keywords: ["åpningstider", "tider", "åpent", "lukket", "stengt"],
+        answer: "Våre åpningstider er: [åpningstider]."
+    }
+];
