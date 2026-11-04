@@ -406,7 +406,7 @@ h1 {
 .ansatte-info .talk {
 	margin-top: 1.30vh;
 	color: lightgray;
-	font: 500 .8rem/1.4 monospace;
+	font-size: 1vw;
 }
 .om-oss {
 	scroll-margin-top: -7.18vh;
@@ -793,6 +793,9 @@ details:hover {
   	.ansatte-grid {
 		gap: 12px;
 	}
+	.talk {
+		font-size: 2vw !important;
+	}
   	.sessions {
 		grid-template-columns: 1fr;
 	}
@@ -861,9 +864,6 @@ details:hover {
 	}
   	#medical-symbol, .mobile-remove, .btn-sm {
 		display: none;
-	}
-  	.talk {
-		font-size: 10px;
 	}
   	.ts-grid {
 		grid-template-columns: 100%;
