@@ -329,7 +329,7 @@ document.querySelectorAll('a[href^="#"], a[data-action^="#"], div[href^="#"], bu
         if (user_action === "T sendt" && skjemaType === "kontakt") {
             user_action_stable = "M sendt";
         }
-        fetch("/api/track", {
+        fetch("./api/track", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -367,7 +367,7 @@ function findTime(container, text) {
 async function update_availability() {
     DontTouch = [];
 
-    const response = await fetch("/api/cell-info-basic");
+    const response = await fetch("./api/cell-info-basic");
     const data = await response.json();
 
     for (const key of Object.keys(data)) {
