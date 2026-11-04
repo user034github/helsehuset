@@ -255,7 +255,7 @@ a:hover {
 }
 #medical-symbol {
 	opacity: 0;
-	animation: fadeIn 2s ease forwards;
+	animation: fadeIn 2s ease 1s forwards;
 }
 @keyframes fadeIn {
 	from {
@@ -321,6 +321,10 @@ h1 {
 	padding: 17vh 0 10.92vh;
 	min-height: 0;
 	align-items: center;
+}
+.hero-copy {
+	opacity: 0;
+	animation: fadeIn 2s ease forwards;
 }
 .hero-in {
 	position: relative;
