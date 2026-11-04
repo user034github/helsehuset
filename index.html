@@ -34,15 +34,15 @@
                     <div id="mobile-kontakt-language">
                         <a id="mobile-kontakt" data-action="#k-skjema" onclick="kontaktSkjema()">Kontakt oss</a>
                         <div id="mobile-language">
-                            <a class="active-language" href="no/index.html" onclick="selectLanguage()">NO</a>
-                            <a class="inactive-language" href="en/index.html" onclick="selectLanguage()">EN</a>
+                            <a class="active-language" href="/no/" onclick="selectLanguage()">NO</a>
+                            <a class="inactive-language" href="/en/" onclick="selectLanguage()">EN</a>
                         </div>
                     </div>
                 </nav>
             </div>
             <div id="desktop-language">
-                <a class="active-language" href="no/index.html" onclick="selectLanguage()">NO</a>
-                <a class="inactive-language" href="en/index.html" onclick="selectLanguage()">EN</a>
+                <a class="active-language" href="/no/" onclick="selectLanguage()">NO</a>
+                <a class="inactive-language" href="/en/" onclick="selectLanguage()">EN</a>
             </div>
         </div>
     </header>
@@ -524,6 +524,22 @@
             </div>
         </section>
     </main>
+    <div id="spørsmål-chat">
+        <section id="spørsmål-chat-panel">
+            <header class="spørsmål-chat-header">
+                <span class="spørsmål-chat-title">Still et spørsmål</span>
+                <button id="spørsmål-chat-close" type="button">x</button>
+            </header>
+            <div id="spørsmål-chat-messages">
+                <div class="spørsmål-chat-message bot">Hei! Hvis du lurer på noe, så kan det hende at jeg vet svaret.</div>
+            </div>
+            <form class="spørsmål-chat-form" id="spørsmål-chat-form">
+                <input id="spørsmål-chat-input" type="text" placeholder="Skriv ditt spørsmål..." autocomplete="off">
+                <button id="spørsmål-chat-send" type="submit">Send</button>
+            </form>
+        </section>
+        <button id="spørsmål-chat-toggle" type="button">💬</button>
+    </div>
     <footer>
         <div class="wrap foot-in">
             <a class="logo" onclick="countdown_reset();">
