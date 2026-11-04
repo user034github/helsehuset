@@ -1,0 +1,548 @@
+<!doctype html>
+<html lang="no">
+<head>
+    <title>Det Norske Helsehuset — Legekontor i Arguineguín</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Legetjenester i Arguineguín">
+    <meta name="google" content="notranslate">
+    <meta property="og:title" content="Det Norske Helsehuset — Legekontor i Arguineguín">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="Legetjenester i Arguineguín">
+    <meta property="og:image" content="images/icon-logo-web.png">
+    <meta name="theme-color" content="#1C2759">
+    <link rel="icon" href="images/icon-logo-web.png">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="main-background"></div>
+    <header class="nav">
+        <div class="nav-in">
+            <div class="wrap nav-in">
+                <a class="logo" onclick="countdown_reset();">
+                    <img src="images/icon-logo-web.png" alt="The logo image of Det Norske Helsehuset">
+                    <span id="kontorNavn">Det Norske Helsehuset</span>
+                </a>
+                <nav class="menu">
+                    <a class="mobile-remove" href="#tjenester">Tjenester</a>
+                    <a class="mobile-remove" href="#om-oss">Om oss</a>
+                    <a class="mobile-remove" href="#finn-oss">Finn oss</a>
+                    <a class="mobile-remove" href="#spørsmål">Spørsmål</a>
+                    <a class="mobile-remove btn btn-sm" href="#tjenester" onclick="countdown_reset();">Book en time</a>
+                    <a id="kontakt" data-action="#k-skjema" onclick="kontaktSkjema()">Kontakt oss</a>
+                    <div id="mobile-kontakt-language">
+                        <a id="mobile-kontakt" data-action="#k-skjema" onclick="kontaktSkjema()">Kontakt oss</a>
+                        <div id="mobile-language">
+                            <a class="active-language" href="no/index.html" onclick="selectLanguage()">NO</a>
+                            <a class="inactive-language" href="en/index.html" onclick="selectLanguage()">EN</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            <div id="desktop-language">
+                <a class="active-language" href="no/index.html" onclick="selectLanguage()">NO</a>
+                <a class="inactive-language" href="en/index.html" onclick="selectLanguage()">EN</a>
+            </div>
+        </div>
+    </header>
+    <main id="main">
+        <section class="hero">
+            <div class="grid-bg"></div>
+            <div class="wrap hero-in">
+                <div class="hero-copy" id="start">
+                    <p class="chips">
+                        <span class="chip1">
+                            Åpent 09-17 (10-15)
+                        </span>
+                        <span class="chip2">
+                            Telefon +34 92 898 8030
+                        </span>
+                    </p>
+                    <h1 id="heading">Din helse <br>i <span class="grad">fokus.</span></h1>
+                    <p class="lead">Vi er ditt legekontor i Arguineguín. Erfarne leger med bred kompetanse ─ 7 dager i uken.</p>
+                    <div class="actioncall-row">
+                        <a class="btn" id="btn-se" href="#tjenester">Se legetjenester</a>
+                        <a class="btn btn-dark" href="#kalender" onclick="countdown_reset();">Se tilgjengelighet</a>
+                    </div>
+                </div>
+                <img id="medical-symbol" src="images/medical-symbol.svg" alt="" width="600" height="600">
+            </div>
+        </section>
+        <section class="om-oss wrap" id="om-oss">
+            <div class="section-head row">
+                <div><h2>Vårt team</h2></div>
+            </div>
+            <ul class="ansatte-grid">
+                <li class="ansatte">
+                    <img src="images/profil-bilde.svg" alt="Portrait of Lege Kjell Vaage" width="200" height="200" loading="lazy">
+                    <div class="ansatte-info"><h3>Lege Kjell Vaage</h3>
+                        <p>Grunnlegger – allmennlege</p>
+                        <p class="talk">Kjell er utdannet i Tyskland. Han var eier av og ledet Greveløkka Medisinske Senter, etablerte Legegruppen
+                            Danmarksplass (m/ ca. 30,000 konsultasjoner pr. år). Han etablerte Pondusklinikken (overvektsklinikk), var Medisinsk gründer
+                            og styremedlem i World Medical Card (2003-2012), og etablerte dette firmaet på Gran Canaria (2007).
+                        </p>
+                    </div>
+                </li>
+                <li class="ansatte">
+                    <img src="images/profil-bilde.svg" alt="Portrait of Lege Ivan Jovovic" width="200" height="200" loading="lazy">
+                    <div class="ansatte-info"><h3>Lege Ivan Jovovic</h3>
+                        <p>Spesialist i allmennmedisin og samfunnsmedisin</p>
+                        <p class="talk">Ivan har 22 års klinisk erfaring fra fastlege, legevakt og sykehus (indremedisin/geriatri; erfaring fra
+                            radiologi, anestesi, og akuttmedisin). Turnus Sørlandet sykehus og Sirdal kommune. Stavanger legevakt (3 år). Erfaring fra Aker og
+                            Namsos sykehus. Kommuneoverlege i Sirdal. Veileder LIS1/ALIS, og tidl. universitetslektor ved UiB (2013-2019).
+                        </p>
+                    </div>
+                </li>
+                <li class="ansatte">
+                    <img src="images/profil-bilde.svg" alt="Portrait of Lege Jon Vangdal Aamaas" width="200" height="200" loading="lazy">
+                    <div class="ansatte-info"><h3>Lege Jon Vangdal Aamaas</h3>
+                        <p>Spesialist i allmennmedisin og samfunnsmedisin</p>
+                        <p class="talk">Jon er utdannet ved UiB (1999–2006). Han har bred erfaring fra allmennmedisin og legevakt, sykehjemsmedisin,
+                            alderspsykiatri og privat helsetjeneste. Han har over 20 års samlet erfaring som fastlege i Bergensområdet, kommuneoverlege og
+                            overlege ved sykehus (NKS Olaviken) med spisskompetanse i kognitiv utredning og demensbehandling.
+                        </p>
+                    </div>
+                </li>
+                <li class="ansatte">
+                    <img src="images/profil-bilde.svg" alt="Portrait of Professor Glenn Haugeberg" width="200" height="200" loading="lazy">
+                    <div class="ansatte-info"><h3>Professor Glenn Haugeberg</h3>
+                        <p>Spesialist i revmatologi</p>
+                        <p class="talk">Glenn er utdannet i Hamburg, med doktorgrad i Tyskland (1990) og Norge (2003), og er en av Norges mest publiserte
+                            revmatologer. Han jobbet i klinikk på Sørlandet (tidl. seksjonsleder), Martina Hansens, St. Olavs og Diakonhjemmet. Han er
+                            tidligere professor ved NTNU; gjesteforsker i USA, England og Polen.
+                        </p>
+                    </div>
+                </li>
+                <li class="ansatte">
+                    <img src="images/profil-bilde.svg" alt="Portrait of Hjertespesialist Egil Vaage" width="200" height="200" loading="lazy">
+                    <div class="ansatte-info"><h3>Hjertespesialist Egil Vaage</h3>
+                        <p>Kardiolog</p>
+                        <p class="talk">Egil har bakgrunn fra SUS (medisinsk/kardiologisk) og hospitering ved Sahlgrenska. Han er grunnlegger og
+                            tidligere leder av Stavanger Hjertesenter AS (1993–2021). ESC-engasjement; foredrag nasjonalt og internasjonalt. Han er
+                            forfatter av pasienthefter; undervisning for sykepleierutdanningen.
+                        </p>
+                    </div>
+                </li>
+                <li class="ansatte">
+                    <img src="images/profil-bilde.svg" alt="Fysio- og manuellterapeut Morten Skjesol" width="200" height="200" loading="lazy">
+                    <div class="ansatte-info"><h3>Fysio- og manuellterapeut Morten Skjesol</h3>
+                        <p>Fysio- og manuellterapeut</p>
+                        <p class="talk">Morten er en av Norges mest erfarne manuellterapeuter og idrettsfysioterapeuter. Han har 30+ år i privat praksis
+                            og arbeidet for flere norske landslag. Videreutdanning i manuellterapi, idrettsmedisin, injeksjoner og akupunktur. Han er
+                            gründer av ANT HMS & Bedriftshelse AS (m/ ca. 15,000 medlemmer).
+                        </p>
+                    </div>
+                </li>
+                <li class="ansatte">
+                    <img src="images/profil-bilde.svg" alt="Portrait of Administrasjon Cila Jovovic" width="200" height="200" loading="lazy">
+                    <div class="ansatte-info"><h3>Administrasjon Cila Jovovic</h3>
+                        <p>Administrasjon</p>
+                        <p class="talk">
+                            Cila jobber med administrasjon.
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section class="tjenester wrap" id="tjenester">
+            <div class="section-head center">
+                <h2>Velg en legetjeneste</h2>
+                <p class="section-sub">Usikker? — <a href="tel:+34928988030">Ring oss</a> eller skriv via <a href="mailto:post@vaage.as">e-post</a>, <a data-action="#k-skjema" onclick="kontaktSkjema()">kontaktskjema</a></p>
+            </div>
+            <p class="arrow left" onclick="scrollTjenester('left')">&#8249;</p>
+            <hr><br>
+            <div class="ts-grid">
+                <article class="ts">
+                    <h3>Konsultasjon</h3>
+                    <p class="ts-pris">200 NOK</p>
+                    <ul>
+                        <li>20 minutter inkludert</li>
+                        <li>Legeerklæring</li>
+                        <li>Resepter</li>
+                        <li>Henvisning</li>
+                    </ul>
+                    <a class="btn velg-btn" onclick="selectTjeneste(this);" href="#kalender">Velg</a>
+                </article>
+                <article class="ts">
+                    <h3>Laboratorium</h3>
+                    <p class="ts-pris">350 NOK</p>
+                    <ul>
+                        <li>Stoffskifte</li>
+                        <li>Kolesterol</li>
+                        <li>Elektrolytter</li>
+                        <li>Hjertemarkører</li>
+                        <li>Blodstatus</li>
+                    </ul>
+                    <a class="btn velg-btn" onclick="selectTjeneste(this);" href="#kalender">Velg</a>
+                </article>
+                <article class="ts">
+                    <h3>Helsekontroll</h3>
+                    <p class="ts-pris">750 NOK</p>
+                    <ul>
+                        <li>Blodtrykk</li>
+                        <li>Vekt, høyde, BMI</li>
+                        <li>Klinisk undersøkelse</li>
+                        <li>EKG (1. gangs undersøkelse)</li>
+                    </ul>
+                    <a class="btn velg-btn" onclick="selectTjeneste(this);" href="#kalender">Velg</a>
+                </article>
+                <article class="ts">
+                    <h3>Ultralyd</h3>
+                    <p class="ts-pris">350 NOK</p>
+                    <ul>
+                        <li>Presis diagonstikk</li>
+                        <li>Organer</li>
+                        <li>Forkalkning i blodårer</li>
+                        <li>Muskler og ledd</li>
+                    </ul>
+                    <a class="btn velg-btn" onclick="selectTjeneste(this);" href="#kalender">Velg</a>
+                </article>
+                <article class="ts">
+                    <h3>Overvektsklinikk</h3>
+                    <p class="ts-pris">350 NOK</p>
+                    <ul>
+                        <li>Kroppsanalyse (InBody 720)</li>
+                        <li>Moderne medikamentell behandling</li>
+                        <li>Typisk 10-12 kg ned innen 8-20 uker</li>
+                        <li>Veiledning i lavglykemisk kost og aktivitet</li>
+                    </ul>
+                    <a class="btn velg-btn" onclick="selectTjeneste(this);" href="#kalender">Velg</a>
+                </article>
+                <article class="ts">
+                    <h3>Hudscreening</h3>
+                    <p class="ts-pris">150 NOK</p>
+                    <ul>
+                        <li>Kontroll av føflekker (Screen Cancer)</li>
+                        <li>Vurdert av norske hudleger</li>
+                    </ul>
+                    <a class="btn velg-btn" onclick="selectTjeneste(this);" href="#kalender">Velg</a>
+                </article>
+                <article class="ts">
+                    <h3>Kognitiv utredning</h3>
+                    <p class="ts-pris">750 NOK</p>
+                    <ul>
+                        <li>MMSE/MMS</li>
+                        <li>MoCA</li>
+                        <li>Klokketest</li>
+                        <li>Trail Making A/B</li>
+                        <li>CERAD</li>
+                        <li>Boston Naming</li>
+                    </ul>
+                    <a class="btn velg-btn" onclick="selectTjeneste(this);" href="#kalender">Velg</a>
+                </article>
+                <article class="ts">
+                    <h3>Vaksiner</h3>
+                    <p class="ts-pris">150 NOK</p>
+                    <ul>
+                        <li>Influensa</li>
+                        <li>Pneumokokk</li>
+                        <li>Helvetesild</li>
+                        <li>Hepatitt A og B</li>
+                        <li>Boostrix Polio</li>
+                        <li>Dokumenteres i journal</li>
+                    </ul>
+                    <a class="btn velg-btn" onclick="selectTjeneste(this);" href="#kalender">Velg</a>
+                </article>
+                <article class="ts">
+                    <h3>PRP-behandling</h3>
+                    <p class="ts-pris">750 NOK</p>
+                    <ul>
+                        <li>Naturlig behandling</li>
+                        <li>Egne vekstfaktorer for ledd, sener, hud og hår</li>
+                    </ul>
+                    <a class="btn velg-btn" onclick="selectTjeneste(this);" href="#kalender">Velg</a>
+                </article>
+                <article class="ts">
+                    <h3>Botulinumbehandling</h3>
+                    <p class="ts-pris">750 NOK</p>
+                    <ul>
+                        <li>Medisinsk og estetisk bruk</li>
+                        <li>Migrene</li>
+                        <li>Muskelspenning</li>
+                        <li>Hyperhidrose</li>
+                        <li>Utblokking av mimikklinjer</li>
+                    </ul>
+                    <a class="btn velg-btn" onclick="selectTjeneste(this);" href="#kalender">Velg</a>
+                </article>
+                <article class="ts">
+                    <h3>Helseattester</h3>
+                    <p class="ts-pris">750 NOK</p>
+                    <ul>
+                        <li>Sjømannsattest</li>
+                        <li>Offshore/Petroleum</li>
+                        <li>Førerkortattest (gruppe 1-3)</li>
+                        <li>Dykkerattest</li>
+                        <li>Arbeids- og idrettsattester</li>
+                    </ul>
+                    <a class="btn velg-btn" onclick="selectTjeneste(this);" href="#kalender">Velg</a>
+                </article>
+                <article class="ts">
+                    <h3>Hjemmebesøk</h3>
+                    <p class="ts-pris">500 NOK</p>
+                    <ul>
+                        <li>Legebesøk i hjem/hotell</li>
+                        <li>Samarbeid med hjemmesykepleie ved behov</li>
+                    </ul>
+                    <a class="btn velg-btn" onclick="selectTjeneste(this);" href="#kalender">Velg</a>
+                </article>
+                <article class="ts">
+                    <h3>Norsk Helsenett</h3>
+                    <p class="ts-pris">500 NOK</p>
+                    <ul>
+                        <li>Kryptert samhandling</li>
+                        <li>Prøver og rapporter til fastlege eller spesialisthelsetjenste</li>
+                    </ul>
+                    <a class="btn velg-btn" onclick="selectTjeneste(this);" href="#kalender">Velg</a>
+                </article>
+            </div>
+            <br><hr>
+            <p class="arrow right" onclick="scrollTjenester('right')">&#8250;</p>
+        </section>
+        <section class="kalender" id="kalender">
+            <div class="registrering" hidden>
+                <h2 id="r_title">Placeholder</h2>
+                <input type="text" id="name" name="name" placeholder="Navn og etternavn" required>
+                <input type="tel" id="phone" name="phone" placeholder="Telefonnummer (inkl. landskode)" required>
+                <textarea id="description" placeholder="En kort beskrivelse (maks. 150 karakterer)" maxlength="150"></textarea>
+                <button type="button" id="send" data-action="#t-sendt" onclick="send(this)">Send inn</button>
+            </div>
+            <div class="wrap">
+                <div class="section-head row">
+                    <div>
+                        <h2 id="kalender-title">Ledige timer</h2>
+                        <h2 id="no-category" hidden>— vennligst velg en <a href="#tjenester">legetjeneste</a></h2>
+                        <h2 id="category" hidden></h2>
+                    </div>
+                </div>
+                <div class="week-days">
+                    <div class="week-day-list" hidden>
+                        <div class="stepper">
+                            <button class="week-edit-up" onclick="change(1)"><strong>+</strong></button>
+                            <button id="week-display"></button>
+                            <button class="week-edit-down" onclick="change(-1)"><strong>-</strong></button>
+                        </div>
+                        <div class="mobile-days">
+                            <button type="button" class="week-btn" data-num="0" data-selected="false"><strong>Mandag</strong></button>
+                            <button type="button" class="week-btn" data-num="1" data-selected="false"><strong>Tirsdag</strong></button>
+                            <button type="button" class="week-btn" data-num="2" data-selected="false"><strong>Onsdag</strong></button>
+                            <button type="button" class="week-btn" data-num="3" data-selected="false"><strong>Torsdag</strong></button>
+                            <button type="button" class="week-btn" data-num="4" data-selected="false"><strong>Fredag</strong></button>
+                            <button type="button" class="week-btn" data-num="5" data-selected="false"><strong>Lørdag</strong></button>
+                            <button type="button" class="week-btn" data-num="6" data-selected="false"><strong>Søndag</strong></button>
+                        </div>
+                    </div>
+                    <br>
+                    <hr>
+                    <div class="weekDayPanel"></div>
+                    <template id="weekDayPanel-template">
+                        <div class="weekDayPanel">
+                            <ol class="timer">
+                                <li class="time">
+                                    <span class="tid-ved-kalender">09 - 10</span>
+                                    <div class="sessions">
+                                        <div class="session" data-action="#t-skjema" onclick="selectTime(this)">
+                                            <span class="tid-ved-kalender">09:00 - 09:20</span>
+                                            <span class="tm tm-ledig">Ledig</span>
+                                        </div>
+                                        <div class="session" data-action="#t-skjema" onclick="selectTime(this)">
+                                            <span class="tid-ved-kalender">09:20 - 09:40</span>
+                                            <span class="tm tm-ledig">Ledig</span>
+                                        </div>
+                                        <div class="session" data-action="#t-skjema" onclick="selectTime(this)">
+                                            <span class="tid-ved-kalender">09:40 - 10:00</span>
+                                            <span class="tm tm-ledig">Ledig</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="time">
+                                    <span class="tid-ved-kalender">10 - 11</span>
+                                    <div class="sessions">
+                                        <div class="session" data-action="#t-skjema" onclick="selectTime(this)">
+                                            <span class="tid-ved-kalender">10:00 - 10:20</span>
+                                            <span class="tm tm-ledig">Ledig</span>
+                                        </div>
+                                        <div class="session" data-action="#t-skjema" onclick="selectTime(this)">
+                                            <span class="tid-ved-kalender">10:20 - 10:40</span>
+                                            <span class="tm tm-ledig">Ledig</span>
+                                        </div>
+                                        <div class="session" data-action="#t-skjema" onclick="selectTime(this)">
+                                            <span class="tid-ved-kalender">10:40 - 11:00</span>
+                                            <span class="tm tm-ledig">Ledig</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="time">
+                                    <span class="tid-ved-kalender">11 - 12</span>
+                                    <div class="sessions">
+                                        <div class="session" data-action="#t-skjema" onclick="selectTime(this)">
+                                            <span class="tid-ved-kalender">11:00 - 11:20</span>
+                                            <span class="tm tm-ledig">Ledig</span>
+                                        </div>
+                                        <div class="session" data-action="#t-skjema" onclick="selectTime(this)">
+                                            <span class="tid-ved-kalender">11:20 - 11:40</span>
+                                            <span class="tm tm-ledig">Ledig</span>
+                                        </div>
+                                        <div class="session" data-action="#t-skjema" onclick="selectTime(this)">
+                                            <span class="tid-ved-kalender">11:40 - 12:00</span>
+                                            <span class="tm tm-ledig">Ledig</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="time">
+                                    <span class="tid-ved-kalender">12 - 13</span>
+                                    <div class="sessions">
+                                        <div class="session" data-action="#t-skjema" onclick="selectTime(this)">
+                                            <span class="tid-ved-kalender">12:00 - 12:20</span>
+                                            <span class="tm tm-ledig">Ledig</span>
+                                        </div>
+                                        <div class="session" data-action="#t-skjema" onclick="selectTime(this)">
+                                            <span class="tid-ved-kalender">12:20 - 12:40</span>
+                                            <span class="tm tm-ledig">Ledig</span>
+                                        </div>
+                                        <div class="session" data-action="#t-skjema" onclick="selectTime(this)">
+                                            <span class="tid-ved-kalender">12:40 - 13:00</span>
+                                            <span class="tm tm-ledig">Ledig</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="time">
+                                    <span class="tid-ved-kalender">13 - 14</span>
+                                    <div class="sessions">
+                                        <div class="session" data-action="#t-skjema" onclick="selectTime(this)">
+                                            <span class="tid-ved-kalender">13:00 - 13:20</span>
+                                            <span class="tm tm-ledig">Ledig</span>
+                                        </div>
+                                        <div class="session" data-action="#t-skjema" onclick="selectTime(this)">
+                                            <span class="tid-ved-kalender">13:20 - 13:40</span>
+                                            <span class="tm tm-ledig">Ledig</span>
+                                        </div>
+                                        <div class="session" data-action="#t-skjema" onclick="selectTime(this)">
+                                            <span class="tid-ved-kalender">13:40 - 14:00</span>
+                                            <span class="tm tm-ledig">Ledig</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="time">
+                                    <span class="tid-ved-kalender">14 - 15</span>
+                                    <div class="sessions">
+                                        <div class="session" data-action="#t-skjema" onclick="selectTime(this)">
+                                            <span class="tid-ved-kalender">14:00 - 14:20</span>
+                                            <span class="tm tm-ledig">Ledig</span>
+                                        </div>
+                                        <div class="session" data-action="#t-skjema" onclick="selectTime(this)">
+                                            <span class="tid-ved-kalender">14:20 - 14:40</span>
+                                            <span class="tm tm-ledig">Ledig</span>
+                                        </div>
+                                        <div class="session" data-action="#t-skjema" onclick="selectTime(this)">
+                                            <span class="tid-ved-kalender">14:40 - 15:00</span>
+                                            <span class="tm tm-ledig">Ledig</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="time">
+                                    <span class="tid-ved-kalender">15 - 16</span>
+                                    <div class="sessions">
+                                        <div class="session" data-action="#t-skjema" onclick="selectTime(this)">
+                                            <span class="tid-ved-kalender">15:00 - 15:20</span>
+                                            <span class="tm tm-ledig">Ledig</span>
+                                        </div>
+                                        <div class="session" data-action="#t-skjema" onclick="selectTime(this)">
+                                            <span class="tid-ved-kalender">15:20 - 15:40</span>
+                                            <span class="tm tm-ledig">Ledig</span>
+                                        </div>
+                                        <div class="session" data-action="#t-skjema" onclick="selectTime(this)">
+                                            <span class="tid-ved-kalender">15:40 - 16:00</span>
+                                            <span class="tm tm-ledig">Ledig</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="time">
+                                    <span class="tid-ved-kalender">16 - 17</span>
+                                    <div class="sessions">
+                                        <div class="session" data-action="#t-skjema" onclick="selectTime(this)">
+                                            <span class="tid-ved-kalender">16:00 - 16:20</span>
+                                            <span class="tm tm-ledig">Ledig</span>
+                                        </div>
+                                        <div class="session" data-action="#t-skjema" onclick="selectTime(this)">
+                                            <span class="tid-ved-kalender">16:20 - 16:40</span>
+                                            <span class="tm tm-ledig">Ledig</span>
+                                        </div>
+                                        <div class="session" data-action="#t-skjema" onclick="selectTime(this)">
+                                            <span class="tid-ved-kalender">16:40 - 17:00</span>
+                                            <span class="tm tm-ledig">Ledig</span>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ol>
+                        </div>
+                    </template>
+                </div>
+                <br>
+                <hr>
+            </div>
+        </section>
+        <section class="finn-oss wrap" id="finn-oss">
+            <div class="lokasjon-map"><img src="images/lokasjon-map.png" width="678" height="466" loading="lazy" alt="Illustrated map showing how to find the doctor's office in Arguneguin"></div>
+            <div class="finn-oss-copy">
+                <h2>Domingo Suárez, Arguineguín</h2>
+                <address>C/Domingo Suárez 11, 35120 Arguineguín</address>
+                <ul class="finn-oss-info">
+                    <li><strong>Åpningstider</strong><span>Man-Fre 09-17<br>Lør-Søn 10-15</span></li>
+                    <li><strong>Parkering</strong><span>Det er gratis parkering for besøkende </span></li>
+                    <li><strong>Navigering</strong><span><a href="https://www.google.com/maps/place/C.+Domingo+Su%C3%A1rez,+11,+35120+Arguinegu%C3%ADn,+Las+Palmas,+Spania/" target="_blank">Vis adressen i Google Maps</a></span></li>
+                </ul>
+            </div>
+        </section>
+        <section class="spørsmål wrap" id="spørsmål">
+            <div class="section-head"><h2>Vanlige spørsmål</h2></div>
+            <div class="spørsmål-list">
+                <details>
+                    <summary>Må man bestille time på forhånd?<span>▼</span></summary>
+                    <p>Nei, du kan komme innom uten å bestille time på forhånd, men det kan hende det blir ventetid.</p>
+                </details>
+                <details>
+                    <summary>Er det gratis parkering for besøkende?<span>▼</span></summary>
+                    <p>Ja, det er gratis parkering for alle våre besøkende.</p>
+                </details>
+                <details>
+                    <summary>Hvordan er det med forsikring?<span>▼</span></summary>
+                    <p>Vi samarbeider med alle norske reiseforsikringsselskaper, samt mange svenske og danske. Vi hjelper med nødvendig dokumentasjon og kontakt med forsikringsselskap eller alarmsentral. Når det foreligger betalingsgaranti, kan behandlingen i mange tilfeller håndteres direkte gjennom reiseforsikringen.</p>
+                </details>
+                <details>
+                    <summary>Kan dere gi dokumentasjon som er gyldig i Norge?<span>▼</span></summary>
+                    <p>Ja, vi har mulighet til å gi dokumentasjon som er gyldig i Norge.</p>
+                </details>
+                <details>
+                    <summary>Kan jeg endre eller avbestille en time jeg har bestilt?<span>▼</span></summary>
+                    <p>Ja, det gjør du ved å ringe oss på +34 92 898 8030.</p>
+                </details>
+                <details>
+                    <summary>Kan man få en telefontime hos dere?<span>▼</span></summary>
+                    <p>Hvis du nevner i bookingen at du ønsker telefontime, så blir du ringt opp av oss. Telefonnummeret vi kommer til å ringe opp fra er +34 92 898 8030.</p>
+                </details>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="wrap foot-in">
+            <a class="logo" onclick="countdown_reset();">
+                <img src="images/icon-logo-web.png" alt="Det Norske Helsehuset's logo image">
+                <span>Det Norske Helsehuset</span>
+            </a>
+            <nav>
+                <div class="sosiale-medier-tekst">
+                    <h3>Finn oss på sosiale medier</h3>
+                    <span>— du kan også følge oss!</span>
+                </div>
+                <div class="sosiale-medier-ikoner">
+                    <a href="https://www.facebook.com" target="_blank" rel="noreferrer"><svg width="50px" height="50px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="none"><path fill="#1877F2" d="M15 8a7 7 0 00-7-7 7 7 0 00-1.094 13.915v-4.892H5.13V8h1.777V6.458c0-1.754 1.045-2.724 2.644-2.724.766 0 1.567.137 1.567.137v1.723h-.883c-.87 0-1.14.54-1.14 1.093V8h1.941l-.31 2.023H9.094v4.892A7.001 7.001 0 0015 8z"/><path fill="#ffffff" d="M10.725 10.023L11.035 8H9.094V6.687c0-.553.27-1.093 1.14-1.093h.883V3.87s-.801-.137-1.567-.137c-1.6 0-2.644.97-2.644 2.724V8H5.13v2.023h1.777v4.892a7.037 7.037 0 002.188 0v-4.892h1.63z"/></svg></a>
+                    <a href="https://www.instagram.com" target="_blank" rel="noreferrer"><svg fill="#ffffff" width="50px" height="50px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1"><path d="M17.34,5.46h0a1.2,1.2,0,1,0,1.2,1.2A1.2,1.2,0,0,0,17.34,5.46Zm4.6,2.42a7.59,7.59,0,0,0-.46-2.43,4.94,4.94,0,0,0-1.16-1.77,4.7,4.7,0,0,0-1.77-1.15,7.3,7.3,0,0,0-2.43-.47C15.06,2,14.72,2,12,2s-3.06,0-4.12.06a7.3,7.3,0,0,0-2.43.47A4.78,4.78,0,0,0,3.68,3.68,4.7,4.7,0,0,0,2.53,5.45a7.3,7.3,0,0,0-.47,2.43C2,8.94,2,9.28,2,12s0,3.06.06,4.12a7.3,7.3,0,0,0,.47,2.43,4.7,4.7,0,0,0,1.15,1.77,4.78,4.78,0,0,0,1.77,1.15,7.3,7.3,0,0,0,2.43.47C8.94,22,9.28,22,12,22s3.06,0,4.12-.06a7.3,7.3,0,0,0,2.43-.47,4.7,4.7,0,0,0,1.77-1.15,4.85,4.85,0,0,0,1.16-1.77,7.59,7.59,0,0,0,.46-2.43c0-1.06.06-1.4.06-4.12S22,8.94,21.94,7.88ZM20.14,16a5.61,5.61,0,0,1-.34,1.86,3.06,3.06,0,0,1-.75,1.15,3.19,3.19,0,0,1-1.15.75,5.61,5.61,0,0,1-1.86.34c-1,.05-1.37.06-4,.06s-3,0-4-.06A5.73,5.73,0,0,1,6.1,19.8,3.27,3.27,0,0,1,5,19.05a3,3,0,0,1-.74-1.15A5.54,5.54,0,0,1,3.86,16c0-1-.06-1.37-.06-4s0-3,.06-4A5.54,5.54,0,0,1,4.21,6.1,3,3,0,0,1,5,5,3.14,3.14,0,0,1,6.1,4.2,5.73,5.73,0,0,1,8,3.86c1,0,1.37-.06,4-.06s3,0,4,.06a5.61,5.61,0,0,1,1.86.34A3.06,3.06,0,0,1,19.05,5,3.06,3.06,0,0,1,19.8,6.1,5.61,5.61,0,0,1,20.14,8c.05,1,.06,1.37.06,4S20.19,15,20.14,16ZM12,6.87A5.13,5.13,0,1,0,17.14,12,5.12,5.12,0,0,0,12,6.87Zm0,8.46A3.33,3.33,0,1,1,15.33,12,3.33,3.33,0,0,1,12,15.33Z"/></svg></a>
+                    <a href="https://www.tiktok.com" target="_blank" rel="noreferrer"><svg fill="#ffffff" width="50px" height="50px" viewBox="0 0 24 24" id="tiktok" data-name="Flat Color" xmlns="http://www.w3.org/2000/svg" class="icon flat-color"><path id="primary" d="M21,7V9a1,1,0,0,1-1,1,8,8,0,0,1-4-1.08V15.5A6.5,6.5,0,1,1,6.53,9.72a1,1,0,0,1,1.47.9v2.52a.92.92,0,0,1-.28.62,2.49,2.49,0,0,0,2,4.23A2.61,2.61,0,0,0,12,15.35V3a1,1,0,0,1,1-1h2.11a1,1,0,0,1,1,.83A4,4,0,0,0,20,6,1,1,0,0,1,21,7Z" style="fill: rgb(255, 255, 255);"></path></svg></a>
+                </div>
+            </nav>
+            <p>© 2026 Det Norske Helsehuset</p>
+        </div>
+    </footer>
+</body>
+</html>
