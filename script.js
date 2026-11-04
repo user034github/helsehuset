@@ -73,7 +73,7 @@ let countdown = 5;
     }
 })();
 
-if (window.location.pathname === "/") {
+if (window.location.pathname === "/helsehuset/") {
     document.getElementById("start").scrollIntoView({
         behavior: "smooth",
         block: "center"
