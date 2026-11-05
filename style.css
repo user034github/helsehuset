@@ -96,7 +96,7 @@ h3 {
 	background: transparent;
 }
 .registrering input {
-	padding-left: 3px;
+	padding-left: 10px;
 }
 .registrering input, textarea, #send {
 	width: 50%;
