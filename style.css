@@ -95,6 +95,9 @@ h3 {
 	scroll-margin-top: 7.19vh;
 	background: transparent;
 }
+.registrering input {
+	padding-left: 3px;
+}
 .registrering input, textarea, #send {
 	width: 50%;
 	border-radius: 14px;
