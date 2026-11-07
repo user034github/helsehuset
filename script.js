@@ -552,15 +552,17 @@ const day_index_en = {
 
 const rules = [
     {
-        keywords: ["pris", "kostnad", "hvor mye", "kroner", "euro"],
+        keywords: ["pris", "prisen", "priser", "kostnad", "koster",
+            "kostet", "hvor mye", "kroner", "euro", "kr", "eur"],
         answer: "Våre priser er: [prisinformasjon]."
     },
     {
-        keywords: ["adresse", "sted", "lokasjon", "hvor"],
+        keywords: ["adresse", "aadressen", "sted", "stedet", "lokasjon", "hvor"],
         answer: "Vår adresse er: [adresse]."
     },
     {
-        keywords: ["åpningstider", "tider", "åpent", "lukket", "stengt"],
+        keywords: ["åpningstid", "åpningstider", "tider", "åpent",
+            "åpner", "åpnet", "lukket", "stengt"],
         answer: "Våre åpningstider er: [åpningstider]."
     }
 ];
