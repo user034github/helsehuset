@@ -73,7 +73,9 @@ let ref_day_nr = (new Date().getDay() + 6) % 7;
     }
 })();
 
-if (window.location.pathname === "/helsehuset/") {
+if (window.location.pathname === "/helsehuset/" 
+    || window.location.pathname === "/helsehuset/no/" 
+    || window.location.pathname === "/helsehuset/en/") {
     document.getElementById("start").scrollIntoView({
         behavior: "smooth",
         block: "center"
