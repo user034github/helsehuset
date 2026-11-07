@@ -73,7 +73,7 @@ let ref_day_nr = (new Date().getDay() + 6) % 7;
     }
 })();
 
-if (window.location.pathname === "/") {
+if (window.location.pathname === "/helsehuset/") {
     document.getElementById("start").scrollIntoView({
         behavior: "smooth",
         block: "center"
