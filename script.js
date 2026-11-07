@@ -352,8 +352,8 @@ async function change(step) {
     }
 
     set_week_display(week_nr);
-    await update_availability();
     document.dispatchEvent(new Event("weekChanged"));
+    await update_availability();
 }
 
 setInterval(async () => {
