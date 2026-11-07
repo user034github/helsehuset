@@ -552,7 +552,7 @@ const day_index_en = {
 
 const rules = [
     {
-        keywords: ["pris", "prisen", "priser", "kostnad", "koster",
+        keywords: ["pris", "prisen", "prisene", "priser", "kostnad", "koster",
             "kostet", "hvor mye", "kroner", "euro", "kr", "eur"],
         answer: "Våre priser er: [prisinformasjon]."
     },
