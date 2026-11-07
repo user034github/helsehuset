@@ -73,7 +73,7 @@ let ref_day_nr = (new Date().getDay() + 6) % 7;
     }
 })();
 
-if (window.location.pathname === "/helsehuset/") {
+if (window.location.pathname === "/") {
     document.getElementById("start").scrollIntoView({
         behavior: "smooth",
         block: "center"
@@ -352,8 +352,8 @@ async function change(step) {
     }
 
     set_week_display(week_nr);
-    document.dispatchEvent(new Event("weekChanged"));
     await update_availability();
+    document.dispatchEvent(new Event("weekChanged"));
 }
 
 setInterval(async () => {
