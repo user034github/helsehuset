@@ -806,8 +806,7 @@ details:hover {
 
 #spørsmål-chat-toggle:focus-visible, #spørsmål-chat-send:focus-visible,
 #spørsmål-chat-input:focus-visible, #spørsmål-chat-close:focus-visible {
-    outline: 3px solid #9AB3FA;
-    outline-offset: 3px;
+    outline: none;
 }
 
 #spørsmål-chat-panel {
@@ -892,7 +891,7 @@ details:hover {
 	color: inherit;
 	font: inherit;
     padding: 10px 12px;
-    border: 1px solid #D3D8E0;
+    border: 1px solid gray;
     border-radius: 10px;
 	min-width: 0;
 }
